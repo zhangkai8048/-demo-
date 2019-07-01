@@ -1,0 +1,29 @@
+vagrant up 启动虚拟机
+
+vagrant destroy 销毁虚拟机
+
+vagrant halt  关闭虚拟化开发环境
+
+vagrant reload 修改配置文件后，重启虚拟化开发环境
+
+vagrant box list 查看当前可用的虚拟化开发环境
+
+vagrant box advagrantd box-name box-file 添加指定的box环境
+
+vagrant box remove box-name 删除指定的box环境
+
+vagrant package 当前正在运行的VirtualBox虚拟环境打包成一个可重复使用的box
+
+config.vm.synced_folder "d:/workspace", "/workspace"
+
+config.vm.network :forwarded_port, guest: 80, host: 8080
+
+config.vm.network :private_network, ip: “192.168.10.10”
+config.vm.network :private_network, ip: “192.168.10.10”
+
+box 网站地址：http://www.vagrantbox.es/
+https://www.jianshu.com/p/74cd6839eb5f
+https://idc.wanyunshuju.com/K8S/583.html
+
+如果：/sbin/mount.vboxsf: mounting failed with the error: No such device
+vagrant plugin install vagrant-vbguest

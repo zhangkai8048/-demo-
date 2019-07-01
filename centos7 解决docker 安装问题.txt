@@ -1,0 +1,58 @@
+Centos7.x 执行 docker 时报如下错误 
+
+出现以下错误
+
+Cannot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?
+1
+
+或
+
+Cannot connect to the Docker daemon at tcp://localhost:2373. Is the docker daemon running?
+
+  
+
+
+配置 DOCKER_HOST
+
+sudo vim /etc/profile.d/docker.sh
+
+内容如下
+
+
+export DOCKER_HOST=tcp://localhost:2375 
+
+1
+应用
+
+
+source /etc/profile
+source /etc/bashrc
+
+配置启动文件
+
+sudo vim /lib/systemd/system/docker.service
+
+将
+
+ExecStart=/usr/bin/dockerd
+1
+修改为
+
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock -H tcp://0.0.0.0:7654
+
+#
+2375 是管理端口 
+7654 是备用端口
+
+
+重载配置和重启
+
+
+sudo systemctl daemon-reload 
+
+sudo systemctl restart docker.service
+
+
+查看
+
+docker version

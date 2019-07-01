@@ -1,0 +1,6 @@
+yum -y install redhat-lsb  
+lsb_release -a 查看linux 发行版本
+uname - a     显示内核版本
+
+netstat -aptn命令行，查看所有开启的端口号，
+lsof -i:端口号命令行

@@ -1,0 +1,34 @@
+docker run -it    IMAGE  /bin/bash   # 交互启动进入容器
+docker run -d    IMAGE  /bin/sh -c "while true ; hello..."
+docker ps  /docker ps -a               #查看容器
+docker inspect  IMAGE_ID             #容器详情
+docker start -i   IMAGE_NAME      #重新启动容器
+docker rm         IMAGE_NAME      #删除已经停止的容器
+docker attach    IMAGE_ID     
+
+docker logs -f [true/false]  -t [true/fales]  --tail IAMGE_NAME   #查看容器日志
+docker exec [-d] [-i] [-t] IMAG_NAME 
+docker stop     IMAG_NAME
+docker kill       IMAG_NAME
+docker top      IMAG_NAME
+
+docker -P （全部端口)/ -p(指定端口)
+docker search...    docker pull...   docker push...
+docker commit -a "zhangkai" -m  "zhangkai commit image" -p  true   #提交容器
+docker  build -t=" name"  ./file   #构建镜像
+
+给正在运行的容器增加端口映射：
+在宿主机运行
+sudo iptables -t nat -A DOCKER -p tcp --dport 8812-j DNAT --to-destination 172.17.0.2:8812
+sudo iptables -t nat -A POSTROUTING -j MASQUERADE -p tcp --source 172.17.0.2 --destination 172.17.0.2 --dport 8812
+sudo iptables -A DOCKER -j ACCEPT -p tcp --destination 172.17.0.2 --dport 8812
+
+docker 创建网络：
+  docker network ls  查看网络
+  docker network  create --subnet=192.168.1.0/24  swoftNetwork 
+  docker run -itd --name hello2 --net swoftNetwork  --ip 192.168.1.1 -p 80:80 kitematic/hello-world-nginx
+  
+
+  
+ 
+
