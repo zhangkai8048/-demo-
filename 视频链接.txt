@@ -3,6 +3,7 @@ k8s            https://www.bilibili.com/video/av44264629/?spm_id_from=333.788.vi
 区块链       https://www.bilibili.com/video/av27691535/?p=38
 go 语言     https://www.bilibili.com/video/av46086727/?p=28 
 微信小游戏 ：https://www.bilibili.com/video/av44767373/?p=59
+嵌入式：https://www.bilibili.com/video/av22022847?from=search&seid=16370173097766656639
 01、Java av47103781
 02、Spring av47103781
 03、Spring Mvc av47176832

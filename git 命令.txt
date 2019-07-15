@@ -2,6 +2,10 @@ origin 未修改 -> modified 已修改  -> staged  已暂存  -> committed  -> push-->mas
                     add                 commit                                           push
 work Area     -->    Stage     ---->        Local repository               -->            remote Repository
 
+
+git push <远程主机名> <本地分支名>:<远程分支名>
+git push origin master:master
+
 查看远程仓库：git remote -v
 添加远程仓库：git remote add [shortname] [url]
 生成ssh key :ssh-keygen -t rsa -C "youremail@example.com"
