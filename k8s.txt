@@ -2,7 +2,7 @@
 172.28.128.5   note01.zhangkai.com centos-1
 172.28.128.4    note01.zhangkai.com centos-2
 172.28.128.3    note01.zhangkai.com centos-32
-
+https://github.com/easzlab/kubeasz/blob/master/docs/setup/00-planning_and_overall_intro.md
 
 docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-apiserver-amd64:v1.15.0
 docker pull registry.cn-hangzhou.aliyuncs.com/google_containers/kube-controller-manager-amd64:v1.15.0
