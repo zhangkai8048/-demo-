@@ -1,0 +1,7 @@
+ip:106.15.199.228      远程密码：Linshi123.
+
+Bt-Panel: http://106.15.199.228:7575/163a4309
+username: lhjsctxp
+password: 163e274a
+
+http://y1.bc8t.cn  admin     admin   
